@@ -1,0 +1,51 @@
+{
+  "name": "skiing-in-singapore",
+  "repository": "git@github.com:rubenillodo/skiing-in-singapore.git",
+  "author": "Rubén Illodo Brea <me@rubenillodo.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "best-path": "ts-node src/index",
+    "test": "jest",
+    "format": "prettier --write \"**/*.{ts,js,md,json}\"",
+    "lint": "tslint -p . -c tslint.json"
+  },
+  "dependencies": {
+    "@types/command-line-args": "^4.0.2",
+    "@types/fs-extra": "^5.0.0",
+    "@types/jest": "^22.0.1",
+    "command-line-args": "^5.0.1",
+    "jest": "^22.1.4",
+    "ts-jest": "^22.0.1",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.9.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
+    "tslint-immutable": "^4.5.1",
+    "tslint-plugin-prettier": "^1.3.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      ".d.ts"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "test\\.ts$",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
